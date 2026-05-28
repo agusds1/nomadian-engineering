@@ -5,193 +5,113 @@ function Navbar() {
 
   const [isOpen, setIsOpen] = useState(false);
 
+  const navLinks = [
+    { name: "Tentang", href: "#about" },
+    { name: "Program", href: "#programs" },
+    { name: "Keunggulan", href: "#benefits" },
+    { name: "Gallery", href: "#gallery" },
+    { name: "Testimoni", href: "#testimonials" },
+    { name: "Alur", href: "#flow" },
+    { name: "Harga", href: "#pricing" },
+    { name: "FAQ", href: "#faq" },
+    { name: "Kontak", href: "#contact" },
+  ];
+
   return (
 
-    <nav className="fixed top-0 left-0 w-full z-50 backdrop-blur-lg bg-white/70 border-b border-white/20 shadow-sm">
+    <nav className="fixed top-0 left-0 w-full z-50 bg-white/75 backdrop-blur-xl border-b border-white/20 shadow-sm">
 
-      <div className="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+      <div className="max-w-7xl mx-auto px-5 md:px-8">
 
-        {/* ================= LOGO ================= */}
-        <h1 className="text-2xl md:text-3xl font-black text-blue-900 tracking-wide cursor-pointer hover:scale-105 transition duration-300">
+        <div className="flex justify-between items-center h-[78px]">
 
-          NOMADIAN
-
-        </h1>
-
-        {/* ================= DESKTOP MENU ================= */}
-        <div className="hidden lg:flex gap-8 text-gray-700 font-semibold text-sm">
-
+          {/* ================= LOGO ================= */}
           <a
-            href="#about"
-            className="relative hover:text-blue-900 transition after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-blue-900 after:transition-all hover:after:w-full"
+            href="#"
+            className="text-[22px] md:text-[28px] font-black tracking-wide text-blue-900 hover:scale-105 transition duration-300"
           >
-            Tentang
+
+            NOMADIAN
+
           </a>
 
-          <a
-            href="#programs"
-            className="relative hover:text-blue-900 transition after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-blue-900 after:transition-all hover:after:w-full"
-          >
-            Program
-          </a>
+          {/* ================= DESKTOP MENU ================= */}
+          <div className="hidden lg:flex items-center gap-8">
 
-          <a
-            href="#benefits"
-            className="relative hover:text-blue-900 transition after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-blue-900 after:transition-all hover:after:w-full"
-          >
-            Keunggulan
-          </a>
+            {navLinks.map((link, index) => (
 
-          <a
-            href="#gallery"
-            className="relative hover:text-blue-900 transition after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-blue-900 after:transition-all hover:after:w-full"
-          >
-            Gallery
-          </a>
+              <a
+                key={index}
+                href={link.href}
+                className="relative text-[15px] font-semibold text-gray-700 hover:text-blue-900 transition-all duration-300 after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-blue-900 after:transition-all after:duration-300 hover:after:w-full"
+              >
 
-          <a
-            href="#testimonials"
-            className="relative hover:text-blue-900 transition after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-blue-900 after:transition-all hover:after:w-full"
-          >
-            Testimoni
-          </a>
+                {link.name}
 
-          <a
-            href="#flow"
-            className="relative hover:text-blue-900 transition after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-blue-900 after:transition-all hover:after:w-full"
-          >
-            Alur
-          </a>
+              </a>
 
-          <a
-            href="#pricing"
-            className="relative hover:text-blue-900 transition after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-blue-900 after:transition-all hover:after:w-full"
-          >
-            Harga
-          </a>
+            ))}
 
-          <a
-            href="#faq"
-            className="relative hover:text-blue-900 transition after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-blue-900 after:transition-all hover:after:w-full"
-          >
-            FAQ
-          </a>
+          </div>
 
+          {/* ================= DESKTOP BUTTON ================= */}
           <a
             href="#contact"
-            className="relative hover:text-blue-900 transition after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-blue-900 after:transition-all hover:after:w-full"
+            className="hidden lg:flex items-center bg-blue-900 text-white px-6 py-3 rounded-2xl font-bold hover:-translate-y-1 hover:shadow-2xl hover:shadow-blue-900/30 transition-all duration-300"
           >
-            Kontak
+
+            Daftar
+
           </a>
 
+          {/* ================= MOBILE BUTTON ================= */}
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="lg:hidden w-11 h-11 flex items-center justify-center rounded-xl bg-blue-50 text-blue-900 hover:bg-blue-100 transition"
+          >
+
+            {isOpen ? <X size={26} /> : <Menu size={26} />}
+
+          </button>
+
         </div>
-
-        {/* ================= DESKTOP BUTTON ================= */}
-        <button className="hidden lg:block bg-blue-900 text-white px-6 py-3 rounded-2xl font-bold hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
-
-          Daftar
-
-        </button>
-
-        {/* ================= MOBILE BUTTON ================= */}
-        <button
-          onClick={() => setIsOpen(!isOpen)}
-          className="lg:hidden text-blue-900"
-        >
-
-          {isOpen ? <X size={32} /> : <Menu size={32} />}
-
-        </button>
 
       </div>
 
       {/* ================= MOBILE MENU ================= */}
       <div
-        className={`lg:hidden overflow-hidden transition-all duration-300 ${
-          isOpen ? "max-h-[700px]" : "max-h-0"
+        className={`lg:hidden overflow-hidden transition-all duration-500 ${
+          isOpen ? "max-h-[800px]" : "max-h-0"
         }`}
       >
 
-        <div className="px-6 pb-8 flex flex-col gap-5 bg-white/95 backdrop-blur-lg border-t border-gray-200">
+        <div className="mx-5 mb-5 p-6 rounded-[28px] bg-white/95 backdrop-blur-2xl border border-blue-100 shadow-2xl flex flex-col gap-1">
 
-          <a
-            href="#about"
-            onClick={() => setIsOpen(false)}
-            className="text-gray-700 font-semibold hover:text-blue-900 transition"
-          >
-            Tentang
-          </a>
+          {navLinks.map((link, index) => (
 
-          <a
-            href="#programs"
-            onClick={() => setIsOpen(false)}
-            className="text-gray-700 font-semibold hover:text-blue-900 transition"
-          >
-            Program
-          </a>
+            <a
+              key={index}
+              href={link.href}
+              onClick={() => setIsOpen(false)}
+              className="px-5 py-4 rounded-2xl text-[16px] font-semibold text-gray-700 hover:bg-blue-50 hover:text-blue-900 transition-all duration-300"
+            >
 
-          <a
-            href="#benefits"
-            onClick={() => setIsOpen(false)}
-            className="text-gray-700 font-semibold hover:text-blue-900 transition"
-          >
-            Keunggulan
-          </a>
+              {link.name}
 
-          <a
-            href="#gallery"
-            onClick={() => setIsOpen(false)}
-            className="text-gray-700 font-semibold hover:text-blue-900 transition"
-          >
-            Gallery
-          </a>
+            </a>
 
-          <a
-            href="#testimonials"
-            onClick={() => setIsOpen(false)}
-            className="text-gray-700 font-semibold hover:text-blue-900 transition"
-          >
-            Testimoni
-          </a>
+          ))}
 
-          <a
-            href="#flow"
-            onClick={() => setIsOpen(false)}
-            className="text-gray-700 font-semibold hover:text-blue-900 transition"
-          >
-            Alur
-          </a>
-
-          <a
-            href="#pricing"
-            onClick={() => setIsOpen(false)}
-            className="text-gray-700 font-semibold hover:text-blue-900 transition"
-          >
-            Harga
-          </a>
-
-          <a
-            href="#faq"
-            onClick={() => setIsOpen(false)}
-            className="text-gray-700 font-semibold hover:text-blue-900 transition"
-          >
-            FAQ
-          </a>
-
+          {/* Mobile CTA */}
           <a
             href="#contact"
             onClick={() => setIsOpen(false)}
-            className="text-gray-700 font-semibold hover:text-blue-900 transition"
+            className="mt-4 bg-blue-900 text-white text-center py-4 rounded-2xl font-bold hover:-translate-y-1 hover:shadow-2xl hover:shadow-blue-900/30 transition-all duration-300"
           >
-            Kontak
-          </a>
-
-          {/* Mobile Button */}
-          <button className="mt-4 bg-blue-900 text-white px-6 py-4 rounded-2xl font-bold hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
 
             Daftar Sekarang
 
-          </button>
+          </a>
 
         </div>
 

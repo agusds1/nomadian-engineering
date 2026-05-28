@@ -2,3 +2,19 @@
 html {
   scroll-behavior: smooth;
 }
+
+@keyframes gallery-slide {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-gallery-slide {
+  display: flex;
+  width: max-content;
+  animation: gallery-slide 45s linear infinite;
+}
