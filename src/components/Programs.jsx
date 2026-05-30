@@ -56,7 +56,7 @@ function Programs() {
       transition={{ duration: 0.7 }}
       viewport={{ once: true }}
       id="programs"
-      className="py-20 md:py-28 bg-gradient-to-br from-blue-50 via-white to-blue-100 overflow-hidden"
+      className="py-14 md:py-16 bg-gradient-to-br from-blue-50 via-white to-blue-100 overflow-hidden"
     >
 
       <div className="max-w-7xl mx-auto px-5 md:px-8">
@@ -70,7 +70,7 @@ function Programs() {
 
           </p>
 
-          <h2 className="text-[34px] sm:text-[42px] lg:text-[58px] leading-[1.1] font-black text-gray-900">
+          <h2 className="text-4xl md:text-5xl leading-tight font-black text-gray-900">
 
             Program Berbasis
             <span className="text-blue-900"> Kompetensi Industri</span>

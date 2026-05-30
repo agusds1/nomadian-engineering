@@ -88,7 +88,7 @@ function FAQ() {
 
     <section
       id="faq"
-      className="py-20 md:py-24 bg-gradient-to-br from-blue-50 via-white to-cyan-50 overflow-hidden"
+      className="py-18 md:py-20 bg-gradient-to-br from-blue-50 via-white to-cyan-50 overflow-hidden"
     >
 
       <div className="max-w-5xl mx-auto px-6">

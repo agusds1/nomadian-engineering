@@ -212,7 +212,7 @@ function Pricing() {
               </a>
 
               <a
-                href="https://wa.me/6281234567890"
+                href="https://wa.me/6281213129318"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="border border-white/20 text-white font-bold text-center px-8 py-4 rounded-2xl hover:bg-white/10 hover:-translate-y-2 hover:shadow-xl transition-all duration-300"

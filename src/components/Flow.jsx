@@ -80,7 +80,7 @@ function Flow() {
           </svg>
 
           {/* Pendaftaran */}
-          <div className="absolute left-[3%] top-[18%]">
+          <div className="absolute left-[5%] top-[20%]">
 
             <div className="w-5 h-5 bg-blue-600 rounded-full shadow-lg mb-4"></div>
 
@@ -95,7 +95,7 @@ function Flow() {
           </div>
 
           {/* Pelatihan */}
-          <div className="absolute left-[30%] top-[45%]">
+          <div className="absolute left-[32%] top-[45%]">
 
             <div className="w-5 h-5 bg-blue-600 rounded-full shadow-lg mb-4"></div>
 

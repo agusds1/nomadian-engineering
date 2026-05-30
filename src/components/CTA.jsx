@@ -25,7 +25,7 @@ function CTA() {
 
               </p>
 
-              <h2 className="text-4xl md:text-5xl font-black leading-tight text-white">
+              <h2 className="text-3xl md:text-4xl font-black leading-tight text-white">
 
                 Bangun Masa Depan
                 Engineering-mu
@@ -59,7 +59,7 @@ function CTA() {
 
               {/* BUTTON 2 */}
               <a
-                href="https://wa.me/6281234567890"
+                href="https://wa.me/6281213129318"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-green-500 text-white font-black text-lg px-8 py-5 rounded-2xl text-center hover:bg-green-400 hover:-translate-y-2 hover:shadow-2xl hover:shadow-green-500/40 transition-all duration-300"

@@ -50,7 +50,7 @@ function Benefits() {
 
     <section
       id="benefits"
-      className="py-20 md:py-28 bg-gradient-to-br from-blue-50 via-white to-cyan-50 overflow-hidden"
+      className="py-18 md:py-20 bg-gradient-to-br from-blue-50 via-white to-cyan-50 overflow-hidden"
     >
 
       <div className="max-w-7xl mx-auto px-5 md:px-8">
@@ -64,7 +64,7 @@ function Benefits() {
 
           </p>
 
-          <h2 className="text-[34px] sm:text-[42px] lg:text-[58px] leading-[1.1] font-black text-gray-900">
+          <h2 className="text-4xl md:text-5xl leading-tight font-black text-gray-900">
 
             Lingkungan Belajar
             <span className="text-blue-900"> Intensif & Profesional</span>
@@ -140,7 +140,7 @@ function Benefits() {
 
                 </p>
 
-                <h3 className="text-[32px] md:text-[48px] leading-[1.1] font-black text-white">
+                <h3 className="text-[32px] md:text-[43px] leading-[1.1] font-black text-white">
 
                   Fokus Belajar,
                   Fokus Karir,

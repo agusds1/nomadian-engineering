@@ -4,7 +4,7 @@ function Contact() {
 
     <section
       id="contact"
-      className="py-20 md:py-24 bg-gradient-to-br from-white via-blue-50 to-cyan-50 overflow-hidden"
+      className="py-18 md:py-20 bg-gradient-to-br from-white via-blue-50 to-cyan-50 overflow-hidden"
     >
 
       <div className="max-w-7xl mx-auto px-6">
@@ -81,7 +81,7 @@ function Contact() {
 
                 <p className="text-gray-700 text-base md:text-lg">
 
-                  08xxxxxxxxxx
+                  081213129318
 
                 </p>
 
@@ -124,7 +124,7 @@ function Contact() {
 
             {/* ================= BUTTON ================= */}
             <a
-              href="https://wa.me/628123456789"
+              href="https://wa.me/6281213129318"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center mt-8 bg-green-500 text-white px-8 py-4 rounded-2xl font-black hover:bg-green-600 hover:-translate-y-2 hover:shadow-2xl hover:shadow-green-400/30 transition-all duration-300"
@@ -246,6 +246,21 @@ function Contact() {
                   placeholder="Teknik Sipil / Arsitektur / Mesin / dll"
                   className="w-full px-5 py-4 rounded-2xl border border-gray-300 focus:outline-none focus:border-blue-900 focus:ring-4 focus:ring-blue-100 transition-all duration-300"
                 />
+
+              </div>
+
+              {/* MOTIVASI */}
+              <div>
+
+                <label className="block text-sm font-bold text-gray-700 mb-2">
+                  Motivasi Mengikuti Bootcamp
+                </label>
+
+                <textarea
+                  rows="4"
+                  placeholder="Ceritakan alasan Anda mengikuti program ini..."
+                  className="w-full px-5 py-4 rounded-2xl border border-gray-300 focus:outline-none focus:border-blue-900 focus:ring-4 focus:ring-blue-100 transition-all duration-300"
+                ></textarea>
 
               </div>
 

@@ -10,8 +10,8 @@ function About() {
       transition={{ duration: 0.7 }}
       viewport={{ once: true }}
       id="about"
-      className="py-20 md:py-28 bg-white overflow-hidden"
-    >
+      className="py-18 md:py-18 bg-white overflow-hidden"
+      >
 
       <div className="max-w-7xl mx-auto px-5 md:px-8">
 
@@ -24,7 +24,7 @@ function About() {
 
           </p>
 
-          <h2 className="text-[34px] sm:text-[42px] lg:text-[58px] leading-[1.1] font-black text-gray-900">
+          <h2 className="text-4xl md:text-5xl leading-[1.1] font-black text-gray-900">
 
             Menyiapkan Tenaga
             <span className="text-blue-900"> Engineering </span>
@@ -115,7 +115,7 @@ function About() {
 
                 </p>
 
-                <h3 className="text-[32px] md:text-[48px] leading-[1.1] font-black">
+                <h3 className="text-[32px] md:text-[43px] leading-[1.1] font-black">
 
                   Fokus pada
                   Kompetensi &
