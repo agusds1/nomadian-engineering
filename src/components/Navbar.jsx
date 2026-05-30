@@ -54,11 +54,27 @@ function Navbar() {
       <div className="max-w-7xl mx-auto px-5 md:px-6 py-4 flex justify-between items-center">
 
         {/* ================= LOGO ================= */}
-        <h1 className="text-xl md:text-3xl font-black text-blue-900 tracking-wide cursor-pointer hover:scale-105 transition duration-300">
+        <div className="flex items-center gap-3 cursor-pointer">
 
-          NOMADIAN
+          <img
+            src="/logo.jpeg"
+            alt="Nomadian Engineering"
+            className="h-10 md:h-12 w-auto object-contain"
+          />
 
-        </h1>
+          <div>
+
+            <h1 className="text-lg md:text-xl font-black text-blue-900 leading-none">
+              NOMADIAN
+            </h1>
+
+            <p className="text-[10px] md:text-xs text-gray-500 tracking-wider">
+              ENGINEERING
+            </p>
+
+          </div>
+
+        </div>
 
         {/* ================= DESKTOP MENU ================= */}
         <div className="hidden lg:flex gap-7 text-sm font-semibold">
