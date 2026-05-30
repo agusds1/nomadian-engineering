@@ -1,221 +1,119 @@
 function Footer() {
-
   return (
-
-    <footer className="bg-gradient-to-br from-slate-950 via-blue-950 to-slate-900 text-white pt-20 pb-10 overflow-hidden">
+    <footer className="bg-gradient-to-br from-slate-950 via-blue-950 to-slate-900 text-white overflow-hidden">
 
       <div className="max-w-6xl mx-auto px-6">
 
-        {/* ================= TOP ================= */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 pb-16 border-b border-white/10">
+        {/* TOP */}
+        <div className="grid md:grid-cols-[2fr_1fr] gap-10 py-12 border-b border-white/10">
 
-          {/* ================= BRAND ================= */}
-          <div className="lg:col-span-2">
+          {/* BRAND */}
+          <div>
 
-            <div className="inline-block mb-5">
+            <div className="flex items-center gap-3 mb-4">
 
-              <div className="bg-white/10 backdrop-blur-md border border-white/10 px-5 py-2 rounded-full text-sm font-bold tracking-[0.2em] text-cyan-200">
+              <img
+                src="/logo.jpeg"
+                alt="Nomadian Engineering"
+                className="w-12 h-12 rounded-lg object-cover"
+              />
 
-                NOMADIAN ENGINEERING
+              <div>
+
+                <h3 className="font-black text-xl">
+                  NOMADIAN
+                </h3>
+
+                <p className="text-xs text-gray-400 tracking-wider">
+                  ENGINEERING
+                </p>
 
               </div>
 
             </div>
 
-            <h2 className="text-4xl md:text-5xl font-black leading-tight">
+            <p className="text-gray-300 leading-relaxed text-sm max-w-sm">
 
-              Bangun Skill,
-              Bangun Karir,
-              Bangun Masa Depan.
-
-            </h2>
-
-            <p className="mt-6 text-gray-300 leading-relaxed text-base max-w-xl">
-
-              Lembaga pelatihan berbasis kompetensi
-              Architecture, Construction, dan Engineering
-              dengan sistem bootcamp intensif,
+              Bootcamp Architecture, Construction,
+              dan Engineering berbasis kompetensi,
               project simulation, magang industri,
               dan penempatan kerja.
 
             </p>
 
-            {/* SOCIAL */}
-            <div className="flex items-center gap-4 mt-8">
-
-              <a
-                href="#"
-                className="w-12 h-12 rounded-2xl bg-white/10 border border-white/10 flex items-center justify-center hover:bg-cyan-400 hover:text-black hover:-translate-y-1 transition-all duration-300"
-              >
-
-                🌐
-
-              </a>
-
-              <a
-                href="#"
-                className="w-12 h-12 rounded-2xl bg-white/10 border border-white/10 flex items-center justify-center hover:bg-pink-500 hover:-translate-y-1 transition-all duration-300"
-              >
-
-                📷
-
-              </a>
-
-              <a
-                href="#"
-                className="w-12 h-12 rounded-2xl bg-white/10 border border-white/10 flex items-center justify-center hover:bg-red-500 hover:-translate-y-1 transition-all duration-300"
-              >
-
-                ▶️
-
-              </a>
-
-            </div>
-
           </div>
 
-          {/* ================= NAVIGATION ================= */}
+          {/* NAVIGATION */}
+          <div className="flex gap-12">
+
+          {/* NAVIGATION */}
           <div>
 
-            <h3 className="text-xl font-black mb-6 text-white">
-
+            <h3 className="font-black text-lg mb-4">
               Navigasi
-
             </h3>
 
-            <div className="space-y-4 text-gray-300">
+            <div className="space-y-2 text-gray-300">
 
-              <a
-                href="#about"
-                className="block hover:text-cyan-300 hover:translate-x-1 transition-all duration-300"
-              >
-
-                Tentang Kami
-
+              <a href="#about" className="block hover:text-cyan-300 transition">
+                Tentang
               </a>
 
-              <a
-                href="#programs"
-                className="block hover:text-cyan-300 hover:translate-x-1 transition-all duration-300"
-              >
-
+              <a href="#programs" className="block hover:text-cyan-300 transition">
                 Program
-
               </a>
 
-              <a
-                href="#benefits"
-                className="block hover:text-cyan-300 hover:translate-x-1 transition-all duration-300"
-              >
-
-                Benefits
-
+              <a href="#benefits" className="block hover:text-cyan-300 transition">
+                Keunggulan
               </a>
 
-              <a
-                href="#gallery"
-                className="block hover:text-cyan-300 hover:translate-x-1 transition-all duration-300"
-              >
-
-                Gallery
-
-              </a>
-
-              <a
-                href="#testimonials"
-                className="block hover:text-cyan-300 hover:translate-x-1 transition-all duration-300"
-              >
-
-                Testimoni
-
+              <a href="#pricing" className="block hover:text-cyan-300 transition">
+                Harga
               </a>
 
             </div>
 
           </div>
 
-          {/* ================= CONTACT ================= */}
+          {/* CONTACT */}
           <div>
 
-            <h3 className="text-xl font-black mb-6 text-white">
-
+            <h3 className="font-black text-lg mb-4">
               Kontak
-
             </h3>
 
-            <div className="space-y-5 text-gray-300">
+            <div className="space-y-3 text-gray-300 text-sm">
 
-              <div className="flex items-start gap-3">
+             <p>📍 Bogor, Jawa Barat</p>
 
-                <span className="text-cyan-300 text-lg">
+            <p>📞 081213129318</p>
 
-                  📍
+            <p>✉️ info@nomadian.com</p>
 
-                </span>
+           </div>
 
-                <p>
-
-                  Bogor, Jawa Barat
-
-                </p>
-
-              </div>
-
-              <div className="flex items-start gap-3">
-
-                <span className="text-cyan-300 text-lg">
-
-                  📞
-
-                </span>
-
-                <p>
-
-                  08xxxxxxxxxx
-
-                </p>
-
-              </div>
-
-              <div className="flex items-start gap-3">
-
-                <span className="text-cyan-300 text-lg">
-
-                  ✉️
-
-                </span>
-
-                <p>
-
-                  nomadian@email.com
-
-                </p>
-
-              </div>
-
-            </div>
+           </div>
 
           </div>
 
         </div>
 
-        {/* ================= BOTTOM ================= */}
-        <div className="pt-8 flex flex-col md:flex-row justify-between items-center gap-5">
+        {/* BOTTOM */}
+        <div className="py-4 flex flex-col md:flex-row justify-between items-center gap-2">
 
-          <p className="text-gray-400 text-sm text-center md:text-left">
+          <p className="text-gray-400 text-sm">
 
-            © 2026 Nomadian Engineering.
-            All rights reserved.
+            © 2026 Nomadian Engineering. All rights reserved.
 
           </p>
 
-          <div className="flex items-center gap-3 text-sm text-gray-400">
+          <div className="flex items-center gap-2 text-sm text-gray-400">
 
             <span className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></span>
 
             <p>
 
-              Designed with passion for future engineers.
+              Designed for future engineers.
 
             </p>
 
@@ -226,7 +124,6 @@ function Footer() {
       </div>
 
     </footer>
-
   );
 }
 
