@@ -1,13 +1,13 @@
 function Flow() {
   const careers = [
     "AutoCAD Drafter",
-    "Site Engineer",
     "Quantity Surveyor",
-    "Estimator",
-    "Project Control",
-    "Construction Supervisor",
-    "Engineering Staff",
     "Document Controller",
+    "Engineering Staff",
+    "Construction Supervisor",
+    "Site Engineer",
+    "Project Control",
+    "Estimator",
   ];
 
   return (
@@ -140,7 +140,7 @@ function Flow() {
           </div>
 
           {/* Career Pills */}
-          <div className="absolute right-[0%] bottom-[65%] w-[250px]">
+          <div className="absolute left-[80%] bottom-[65%] w-[280px]">
 
               <div className="flex flex-wrap justify-center gap-4">
 
@@ -160,7 +160,7 @@ function Flow() {
               ))}
 
             </div>
-            <h3 className="text-2xl font-black text-blue-900 mt-4 text-center">
+            <h3 className="text-2xl font-black text-blue-900 mt-3 text-center">
               Peluang Karir
             </h3>
 
