@@ -1,30 +1,65 @@
+import { motion } from "framer-motion";
+
 function Loader() {
 
   return (
 
-    <div className="fixed inset-0 bg-slate-950 flex items-center justify-center z-[9999]">
+    <motion.div
+      initial={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.8 }}
+      className="fixed inset-0 z-[9999] bg-gradient-to-br from-blue-950 via-slate-900 to-black flex items-center justify-center overflow-hidden"
+    >
 
-      <div className="text-center">
+      {/* Glow */}
+      <div className="absolute w-72 h-72 bg-cyan-400/20 rounded-full blur-3xl"></div>
 
-        {/* Circle */}
-        <div className="w-24 h-24 border-4 border-blue-500 border-t-transparent rounded-full animate-spin mx-auto"></div>
+      {/* Content */}
+      <div className="relative text-center">
 
-        {/* Text */}
-        <h1 className="mt-8 text-3xl font-black text-white tracking-widest">
+        {/* Logo */}
+        <motion.h1
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          className="text-4xl md:text-6xl font-black tracking-[0.2em] text-white"
+        >
 
           NOMADIAN
 
-        </h1>
+        </motion.h1>
 
-        <p className="text-blue-300 mt-3">
+        {/* Small Text */}
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5, duration: 1 }}
+          className="mt-5 text-blue-200 tracking-[0.3em] text-sm md:text-base"
+        >
 
-          Loading Engineering Future...
+          ENGINEERING BOOTCAMP
 
-        </p>
+        </motion.p>
+
+        {/* Loading Line */}
+        <div className="mt-10 w-56 h-[4px] bg-white/10 rounded-full overflow-hidden mx-auto">
+
+          <motion.div
+            initial={{ x: "-100%" }}
+            animate={{ x: "100%" }}
+            transition={{
+              repeat: Infinity,
+              duration: 1.5,
+              ease: "linear",
+            }}
+            className="w-1/2 h-full bg-cyan-400"
+          />
+
+        </div>
 
       </div>
 
-    </div>
+    </motion.div>
 
   );
 }

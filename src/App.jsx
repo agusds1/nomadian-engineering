@@ -4,7 +4,7 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Programs from "./components/Programs";
-import BootcampFlow from "./components/BootcampFlow";
+import Flow from "./components/Flow";
 import Benefits from "./components/Benefits";
 import Pricing from "./components/Pricing";
 import FAQ from "./components/FAQ";
@@ -16,6 +16,8 @@ import Loader from "./components/Loader";
 import Gallery from "./components/Gallery";
 import Testimonial from "./components/Testimonial";
 import Contact from "./components/Contact";
+import FloatingButtons from "./components/FloatingButtons";
+
 
 function App() {
 
@@ -25,11 +27,13 @@ function App() {
 
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 2000);
+    }, 3000);
 
     return () => clearTimeout(timer);
 
   }, []);
+
+  if (loading) return <Loader />;
 
   return (
 
@@ -46,13 +50,14 @@ function App() {
       <Benefits />
       <Gallery />
       <Testimonial />
-      <BootcampFlow />
+      <Flow />
       <Pricing />
       <FAQ />
       <Contact />
       <CTA />
       <Footer />
       <FloatingWhatsApp />
+      <FloatingButtons />
 
     </div>
 

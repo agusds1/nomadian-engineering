@@ -4,7 +4,7 @@ function Pricing() {
 
     <section
       id="pricing"
-      className="py-20 md:py-24 bg-gradient-to-br from-white via-blue-50 to-cyan-50 overflow-hidden"
+      className="pt-8 pb-20 md:pt-8 md:pb-24 bg-gradient-to-br from-white via-blue-50 to-cyan-50 overflow-hidden"
     >
 
       <div className="max-w-6xl mx-auto px-6">
