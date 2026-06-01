@@ -60,6 +60,13 @@ function Contact() {
         label: "Form Pendaftaran Nomadian",
       });
 
+      ReactGA.event({
+        category: "Pendaftaran",
+        action: "Submit Form",
+        label: "Bootcamp Registration",
+      });
+
+      
       window.scrollTo({
       top: document.getElementById("contact").offsetTop,
       behavior: "smooth",
