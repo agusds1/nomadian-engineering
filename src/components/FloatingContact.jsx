@@ -18,7 +18,7 @@ function FloatingContact({ open, setOpen }) {
           </a>
 
           <a
-            href="mailto:arcadian.lpk@email.com"
+            href="mailto:arcadian.lpk@gmail.com"
             className="bg-blue-500 text-white px-4 py-3 rounded-full shadow-lg hover:scale-105 transition-all duration-300"
           >
             ✉️ Email
