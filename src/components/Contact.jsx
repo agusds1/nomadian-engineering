@@ -1,4 +1,6 @@
 import { useState } from "react";
+import ReactGA from "react-ga4";
+
 function Contact() {
 
   const [formData, setFormData] = useState({
@@ -42,7 +44,7 @@ function Contact() {
     try {
 
      await fetch(
-      "https://script.google.com/macros/s/AKfycbyNW4PbLqSlRYJLZFyRGJGvrX0eF0Sysvs10bjwtk2d1RRYNriIgMv2jJF9rP3ZR-j3/exec",
+      "https://script.google.com/macros/s/AKfycby8Ye_ADibUaM8w5CRNWJkNyjR82c10_utGRv5kgSyAsPcdwMLySm_T05yDeLyWohDX/exec",
       {
         method: "POST",
         mode: "no-cors",
@@ -51,6 +53,12 @@ function Contact() {
       );
 
       setSuccess(true);
+
+      ReactGA.event({
+        category: "Pendaftaran",
+        action: "Submit Form",
+        label: "Form Pendaftaran Nomadian",
+      });
 
       window.scrollTo({
       top: document.getElementById("contact").offsetTop,
@@ -205,6 +213,14 @@ function Contact() {
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center mt-8 bg-green-500 text-white px-8 py-4 rounded-2xl font-black hover:bg-green-600 hover:-translate-y-2 hover:shadow-2xl hover:shadow-green-400/30 transition-all duration-300"
+              onClick={() =>
+                ReactGA.event({
+                  category: "Kontak",
+                  action: "Klik WhatsApp",
+                  label: "WhatsApp Utama",
+                })
+              }
+            
             >
 
               Chat WhatsApp
