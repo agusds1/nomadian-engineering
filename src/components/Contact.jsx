@@ -44,7 +44,7 @@ function Contact() {
     try {
 
      await fetch(
-      "https://script.google.com/macros/s/AKfycbxZOXebiG-lQIP7OMh8WJRDTyuIXzonmo--7_bPQcs8BhPSf5ecOeicv1CDJVg699uBDw/exec",
+      "https://script.google.com/macros/s/AKfycbx9yA60DeSozpwx72y5EIvlaahQxeTxC95lTX0AgDHk0SyEV9-2XMBThCiB9f6xTU3S/exec",
       {
         method: "POST",
         mode: "no-cors",
