@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { ArrowUp } from "lucide-react";
 
-function FloatingButton() {
+function FloatingButtons({ contactOpen }) {
 
   const [showButton, setShowButton] = useState(false);
 
@@ -9,7 +9,6 @@ function FloatingButton() {
 
     const handleScroll = () => {
 
-      // tombol muncul setelah melewati hero section
       if (window.scrollY > 700) {
         setShowButton(true);
       } else {
@@ -37,7 +36,7 @@ function FloatingButton() {
 
     <button
       onClick={scrollToTop}
-      className={`fixed bottom-24 right-6 z-50
+      className={`fixed right-6 z-50
       bg-blue-900 text-white
       w-14 h-14 md:w-16 md:h-16
       rounded-full
@@ -46,7 +45,13 @@ function FloatingButton() {
       hover:scale-110
       hover:-translate-y-1
       hover:shadow-blue-500/40
-      transition-all duration-300
+      transition-all duration-500 ease-in-out
+
+      ${
+        contactOpen
+          ? "bottom-84"
+          : "bottom-24"
+      }
 
       ${
         showButton
@@ -63,4 +68,4 @@ function FloatingButton() {
   );
 }
 
-export default FloatingButton;
+export default FloatingButtons;

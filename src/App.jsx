@@ -10,7 +10,7 @@ import Pricing from "./components/Pricing";
 import FAQ from "./components/FAQ";
 import CTA from "./components/CTA";
 import Footer from "./components/Footer";
-import FloatingWhatsApp from "./components/FloatingWhatsApp";
+import FloatingContact from "./components/FloatingContact";
 import ScrollProgress from "./components/ScrollProgress";
 import Loader from "./components/Loader";
 import Gallery from "./components/Gallery";
@@ -18,10 +18,10 @@ import Testimonial from "./components/Testimonial";
 import Contact from "./components/Contact";
 import FloatingButtons from "./components/FloatingButtons";
 
-
 function App() {
 
   const [loading, setLoading] = useState(true);
+  const [contactOpen, setContactOpen] = useState(false);
 
   useEffect(() => {
 
@@ -56,8 +56,15 @@ function App() {
       <Contact />
       <CTA />
       <Footer />
-      <FloatingWhatsApp />
-      <FloatingButtons />
+
+      <FloatingContact
+        open={contactOpen}
+        setOpen={setContactOpen}
+      />
+
+      <FloatingButtons
+        contactOpen={contactOpen}
+      />
 
     </div>
 
