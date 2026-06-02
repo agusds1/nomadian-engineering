@@ -1,3 +1,5 @@
+import ReactGA from "react-ga4";
+
 function FloatingContact({ open, setOpen }) {
 
   return (
@@ -10,15 +12,30 @@ function FloatingContact({ open, setOpen }) {
 
           <a
             href="https://wa.me/6281213129318"
+            onClick={() => {
+            ReactGA.event({
+            category: "Contact",
+            action: "Click WhatsApp",
+            label: "Floating Contact",
+           })
+            }}
             target="_blank"
             rel="noreferrer"
             className="bg-green-500 text-white px-4 py-3 rounded-full shadow-lg hover:scale-105 transition-all duration-300"
-          >
+            >
             🟢 WhatsApp
           </a>
 
           <a
               href="https://mail.google.com/mail/?view=cm&fs=1&to=arcadian.lpk@gmail.com&su=Informasi%20Bootcamp%20Nomadian"
+              onClick={() =>{
+              ReactGA.event({
+                category: "Contact",
+                action: "Click Email",
+                label: "Floating Contact",
+                })
+               }}
+                          
               target="_blank"
               rel="noreferrer"
               className="bg-blue-500 text-white px-4 py-3 rounded-full shadow-lg hover:scale-105 transition-all duration-300"
@@ -28,6 +45,14 @@ function FloatingContact({ open, setOpen }) {
 
           <a
             href="https://instagram.com/nomadian.engineering"
+            onClick={() =>{
+              ReactGA.event({
+                category: "Contact",
+                action: "Click Instagram",
+                label: "Floating Contact",
+              })
+            }}
+
             target="_blank"
             rel="noreferrer"
             className="bg-pink-500 text-white px-4 py-3 rounded-full shadow-lg hover:scale-105 transition-all duration-300"

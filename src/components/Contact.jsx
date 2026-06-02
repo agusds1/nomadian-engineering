@@ -53,6 +53,11 @@ function Contact() {
       );
 
       setSuccess(true);
+      ReactGA.event({
+        category: "Lead",
+        action: "Submit Registration Form",
+        label: formData.pendidikan,
+      });
 
       ReactGA.event({
         category: "Pendaftaran",
