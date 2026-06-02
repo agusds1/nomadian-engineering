@@ -49,7 +49,7 @@ function FloatingButtons({ contactOpen }) {
 
       ${
         contactOpen
-          ? "bottom-74"
+          ? "bottom-76"
           : "bottom-24"
       }
 

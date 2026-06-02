@@ -1,4 +1,4 @@
-import ReactGA from "react-ga4";
+import { useEffect, useRef } from "react";
 import { MessageCircle, X } from "lucide-react";
 
 import {
@@ -12,10 +12,41 @@ import {
 
 
 function FloatingContact({ open, setOpen }) {
+  const menuRef = useRef(null);
+    useEffect(() => {
+
+    const handleClickOutside = (event) => {
+
+      if (
+        menuRef.current &&
+        !menuRef.current.contains(event.target)
+      ) {
+        setOpen(false);
+      }
+
+    };
+
+    document.addEventListener(
+      "mousedown",
+      handleClickOutside
+    );
+
+    return () => {
+
+      document.removeEventListener(
+        "mousedown",
+        handleClickOutside
+      );
+
+    };
+
+  }, [setOpen]);
 
   return (
 
-    <div className="fixed bottom-6 right-5 z-50">
+    <div 
+    ref={menuRef}
+    className="fixed bottom-6 right-5 z-50">
 
       {open && (
 
@@ -163,7 +194,7 @@ function FloatingContact({ open, setOpen }) {
 
       <button
         onClick={() => setOpen(!open)}
-        className="w-16 h-16 rounded-full bg-blue-900 text-white text-2xl shadow-2xl flex items-center justify-center hover:scale-110 transition-all duration-300"
+        className="w-16 h-16 rounded-full bg-green-600 text-white text-2xl shadow-2xl flex items-center justify-center hover:scale-110 transition-all duration-300"
       >
         {open ? (  <X size={28} />
         ) : (
