@@ -36,7 +36,7 @@ function FloatingButtons({ contactOpen }) {
 
     <button
       onClick={scrollToTop}
-      className={`fixed right-6 z-50
+      className={`fixed right-5 z-50
       bg-blue-900 text-white
       w-14 h-14 md:w-16 md:h-16
       rounded-full
@@ -49,7 +49,7 @@ function FloatingButtons({ contactOpen }) {
 
       ${
         contactOpen
-          ? "bottom-84"
+          ? "bottom-74"
           : "bottom-24"
       }
 
