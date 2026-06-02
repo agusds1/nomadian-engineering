@@ -1,4 +1,13 @@
 import ReactGA from "react-ga4";
+import {
+  FaWhatsapp,
+  FaInstagram
+} from "react-icons/fa";
+
+import {
+  MdEmail
+} from "react-icons/md";
+
 
 function FloatingContact({ open, setOpen }) {
 
@@ -8,56 +17,90 @@ function FloatingContact({ open, setOpen }) {
 
       {open && (
 
-        <div className="absolute bottom-20 right-0 flex flex-col items-end gap-3 transition-all duration-300">
+        <div className="absolute bottom-20 right-0 flex flex-col items-center gap-3">
 
-          <a
-            href="https://wa.me/6281213129318"
-            onClick={() => {
-            ReactGA.event({
+        {/* WhatsApp */}
+        <a
+        href="https://wa.me/6281213129318"
+        onClick={() => {
+          ReactGA.event({
             category: "Contact",
             action: "Click WhatsApp",
             label: "Floating Contact",
-           })
-            }}
-            target="_blank"
-            rel="noreferrer"
-            className="bg-green-500 text-white px-4 py-3 rounded-full shadow-lg hover:scale-105 transition-all duration-300"
-            >
-            🟢 WhatsApp
-          </a>
+          });
+        }}
+        target="_blank"
+        rel="noreferrer"
+        className="
+          w-14 h-14
+          bg-white
+          rounded-full
+          shadow-xl
+          flex items-center justify-center
+          hover:scale-110
+          transition-all duration-300
+        "
+       >
+        <FaWhatsapp
+        size={30}
+        className="text-green-500"
+        />
+       </a>
 
-          <a
-              href="https://mail.google.com/mail/?view=cm&fs=1&to=arcadian.lpk@gmail.com&su=Informasi%20Bootcamp%20Nomadian"
-              onClick={() =>{
-              ReactGA.event({
-                category: "Contact",
-                action: "Click Email",
-                label: "Floating Contact",
-                })
-               }}
-                          
-              target="_blank"
-              rel="noreferrer"
-              className="bg-blue-500 text-white px-4 py-3 rounded-full shadow-lg hover:scale-105 transition-all duration-300"
-            >
-              ✉️ Email
-          </a>
+        {/* Email */}
+        <a
+        href="https://mail.google.com/mail/?view=cm&fs=1&to=arcadian.lpk@gmail.com&su=Informasi%20Bootcamp%20Nomadian"
+        onClick={() => {
+        ReactGA.event({
+          category: "Contact",
+          action: "Click Email",
+          label: "Floating Contact",
+        });
+        }}
+        target="_blank"
+        rel="noreferrer"
+        className="
+        w-14 h-14
+        bg-white
+        rounded-full
+        shadow-xl
+        flex items-center justify-center
+        hover:scale-110
+        transition-all duration-300
+        "
+        >
+        <MdEmail
+        size={30}
+        className="text-red-500"
+       />
+       </a>
 
-          <a
-            href="https://instagram.com/nomadian.engineering"
-            onClick={() =>{
-              ReactGA.event({
-                category: "Contact",
-                action: "Click Instagram",
-                label: "Floating Contact",
-              })
-            }}
-
-            target="_blank"
-            rel="noreferrer"
-            className="bg-pink-500 text-white px-4 py-3 rounded-full shadow-lg hover:scale-105 transition-all duration-300"
-          >
-            📷 Instagram
+         {/* Instagram */}
+        <a
+          href="https://instagram.com/nomadian.engineering"
+          onClick={() => {
+            ReactGA.event({
+              category: "Contact",
+              action: "Click Instagram",
+              label: "Floating Contact",
+            });
+          }}
+          target="_blank"
+          rel="noreferrer"
+          className="
+            w-14 h-14
+            bg-white
+            rounded-full
+            shadow-xl
+            flex items-center justify-center
+            hover:scale-110
+            transition-all duration-300
+          "
+         >
+         <FaInstagram
+         size={28}
+          className="text-pink-500"
+            />
           </a>
 
         </div>
